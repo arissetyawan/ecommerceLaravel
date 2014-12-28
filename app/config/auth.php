@@ -28,7 +28,8 @@ return array(
 	|
 	*/
 
-	'model' => 'User',
+	//'model' => 'User',
+    'model' => 'Account',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -41,7 +42,8 @@ return array(
 	|
 	*/
 
-	'table' => 'users',
+	//'table' => 'users',
+    'table' => 'account',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -58,7 +60,7 @@ return array(
 	|
 	*/
 
-	'reminder' => array(
+	/*'reminder' => array(
 
 		'email' => 'emails.auth.reminder',
 
@@ -66,6 +68,12 @@ return array(
 
 		'expire' => 60,
 
-	),
+	),*/
+
+    'reminder' => array(
+        'email' => 'email/request',
+        'table' => 'token',
+        'expire' => 60
+    ),
 
 );

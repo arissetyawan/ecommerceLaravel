@@ -16,7 +16,8 @@ class ProductTableSeeder extends DatabaseSeeder{
 
             for($i=0; $i<rand(-1, 10); $i++){ //tand() - this function generate random number
                 $name = ucwords($faker->word);
-                $stock = $faker->randomNumber(0, 100);
+                //$stock = $faker->randomNumber(0, 100);
+                $stock = $faker->numberBetween(0,100);
                 $price = $faker->randomFloat(2,5,100);
 
                 Product::create([

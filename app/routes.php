@@ -15,3 +15,24 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+/*
+ * URL = "category/index" буде опрацьовувати контроллер - CategoryController,  метод - indexAction
+ * */
+Route::any("category/index", [
+    "as"   => "category/index",
+    "uses" => "CategoryController@indexAction"
+]);
+
+/*
+ * URL = "product/index" буде опрацьовувати контроллер - ProductController,  метод - indexAction
+ * */
+Route::any("product/index", [
+    "as"   => "product/index",
+    "uses" => "ProductController@indexAction"
+]);
+
+
+
+
+

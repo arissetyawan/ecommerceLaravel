@@ -23,7 +23,8 @@ class OrderItemTableSeeder extends DatabaseSeeder{
 
                     $id = $product["id"];
                     $price = $product["price"];
-                    $quantity = $faker->randomNumber(1,3);
+                    //$quantity = $faker->randomNumber(1,3);
+                    $quantity = $faker->numberBetween(1,3);
 
                     OrderItem::create([
                         "order_id" => $order->id,
